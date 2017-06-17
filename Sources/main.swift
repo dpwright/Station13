@@ -2,6 +2,11 @@ import Foundation
 import FeedKit
 import Stencil
 
+/********* CONFIGURATION *********/
+let feedURL            = URL(string: "http://station13.libsyn.com/rss")!
+let episodesOnMainPage = 5
+
+/*********    THE CODE   *********/
 extension String {
     func write(toFile path: String,
                atomically useAuxiliaryFile: Bool,
@@ -25,7 +30,6 @@ extension String {
     }
 }
 
-let feedURL = URL(string: "http://station13.libsyn.com/rss")!
 guard let result = FeedParser(URL: feedURL)?.parse() else {
     print("Failed to construct FeedParser for URL \(feedURL)")
     abort()
@@ -43,13 +47,12 @@ let episodes = feed.items ?? []
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
 
-let context : [String: Any] = [
-    "title" : title,
-    "items" : episodes[0..<5].map{ $0 }
-]
-
+// Main page
 let template = try environment.loadTemplate(name: "index.html")
-let index = try template.render(context)
+let index = try template.render([
+    "title" : title,
+    "items" : episodes[0..<episodesOnMainPage].map{ $0 }
+])
 try index.write(toFile            : "Site/index.html",
                 atomically        : true,
                 encoding          : .utf8,
