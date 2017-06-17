@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>
+      Station 13
+    </title>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    {% for item in items %}
+      <h2>{{ item.title }}</h2>
+      {{ item.description }}
+    {% endfor %}
+  </body>
+</html>
