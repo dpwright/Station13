@@ -3,5 +3,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "site"
+    name: "site",
+    dependencies: [
+        .Package(url: "https://github.com/nmdias/FeedKit.git", majorVersion: 6)
+    ]
 )
