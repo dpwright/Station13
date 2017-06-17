@@ -7,8 +7,8 @@
   <body>
     <h1>{{ title }}</h1>
     {% for item in items %}
-      <h2>{{ item.title }}</h2>
-      {{ item.description }}
+      <h2><a href="{{item.index}}">{{ item.content.title }}</a></h2>
+      {{ item.content.description }}
     {% endfor %}
   </body>
 </html>
