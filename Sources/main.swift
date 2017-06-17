@@ -37,12 +37,15 @@ guard let feed = result.rssFeed,
     abort()
 }
 
+let title    = feed.title ?? "Unnamed Podcast"
+let episodes = feed.items ?? []
+
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
 
 let context : [String: Any] = [
-    "title" : feed.title ?? "Unnamed Podcast",
-    "items" : feed.items ?? []
+    "title" : title,
+    "items" : episodes[0..<5].map{ $0 }
 ]
 
 let template = try environment.loadTemplate(name: "index.html")
