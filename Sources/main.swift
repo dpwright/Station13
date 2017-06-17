@@ -51,8 +51,8 @@ let environment = Environment(loader: fsLoader)
 let mainTemplate = try environment.loadTemplate(name: "index.html")
 let limit = min(episodesOnMainPage, episodes.count)
 let index = try mainTemplate.render([
-    "title" : title,
-    "items" : episodes[0..<limit].map{ ["index": $0.0, "content": $0.1] }
+    "podcastTitle" : title,
+    "episodes"     : episodes[0..<limit].map{ ["index": $0.0, "content": $0.1] }
 ])
 try index.write(toFile            : "Site/index.html",
                 atomically        : true,
@@ -61,12 +61,12 @@ try index.write(toFile            : "Site/index.html",
 
 // Episode pages
 let episodeTemplate = try environment.loadTemplate(name: "episode.html")
-for (index, item) in episodes {
-    let episode = try episodeTemplate.render([
-        "title" : title,
-        "item"  : item
+for (index, episode) in episodes {
+    let episodePage = try episodeTemplate.render([
+        "podcastTitle" : title,
+        "episode"      : episode
     ])
-    try episode.write(toFile            : "Site/\(index)/index.html",
+    try episodePage.write(toFile            : "Site/\(index)/index.html",
                       atomically        : true,
                       encoding          : .utf8,
                       creatingDirectory : true)

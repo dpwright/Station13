@@ -1,14 +1,14 @@
 <html>
   <head>
     <title>
-      Station 13
+      {{ podcastTitle }}
     </title>
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    {% for item in items %}
-      <h2><a href="{{item.index}}">{{ item.content.title }}</a></h2>
-      {{ item.content.description }}
+    <h1>{{ podcastTitle }}</h1>
+    {% for episode in episodes %}
+      <h2><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
+      {{ episode.content.description }}
     {% endfor %}
   </body>
 </html>
