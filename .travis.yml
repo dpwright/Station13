@@ -1,0 +1,25 @@
+language: swift
+branches:
+  only:
+    - source
+env:
+  global:
+    - secure: "Jc7XHdzAuXpQHX9w5H8ij8u/c4+eLSlyPTv+gT7Yjwf4n1xUwoUujHG5RoFrTUUUuNSc5qtsCBUXcaYHaF1yFWfmCuhNGc6H5VszFy8keXr4LBmtn8pIoKRSqs4EJ+NDp3v8fz/9znCzUHcaCPJFHET2pN7G8UwV/WpGT2JevDw="
+before_script:
+  - cd Site
+  - git checkout master
+  - git pull origin master
+  - rm -rf *
+  - cd ..
+script:
+  - swift build
+  - .build/debug/site
+after_success:
+  - cd Site
+  - git status
+  - git add -A
+  - git config --global user.email "dani@dpwright.com"
+  - git config --global user.name "Daniel P. Wright"
+  - git commit -m "Snapshot $(date '+%m/%d/%y %H:%M')"
+  - git push "$REPO_URL" master | grep -v http
+  - cd ..
