@@ -1,6 +1,7 @@
 import Foundation
 import FeedKit
 import Stencil
+import Files
 
 /********* CONFIGURATION *********/
 let feedURL            = URL(string: "http://station13.libsyn.com/rss")!
@@ -71,3 +72,22 @@ for (index, episode) in episodes {
                           encoding          : .utf8,
                           creatingDirectory : true)
 }
+
+// Static content
+extension FileSystem.Item {
+    func copy(to newParent: Folder) throws {
+        let newPath = newParent.path + name
+
+        do {
+            let fileManager = FileManager.default
+            try fileManager.copyItem(atPath: path, toPath: newPath)
+        } catch {
+            throw OperationError.moveFailed(self)
+        }
+    }
+}
+
+let originFolder = try Folder(path: "Static")
+let targetFolder = try Folder(path: "Site")
+try originFolder.files.forEach{ try $0.copy(to: targetFolder) }
+try originFolder.subfolders.forEach{ try $0.copy(to: targetFolder) }
