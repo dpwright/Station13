@@ -5,7 +5,9 @@ branches:
     - source
 env:
   global:
-    - secure: "Jc7XHdzAuXpQHX9w5H8ij8u/c4+eLSlyPTv+gT7Yjwf4n1xUwoUujHG5RoFrTUUUuNSc5qtsCBUXcaYHaF1yFWfmCuhNGc6H5VszFy8keXr4LBmtn8pIoKRSqs4EJ+NDp3v8fz/9znCzUHcaCPJFHET2pN7G8UwV/WpGT2JevDw="
+    - GH_REPO="dpwright/Station13"
+    - secure: nM5/0HttMOI3C9CcW96Ggh5mnIWbM7COJwKguWMOG6HFHOfjACleywVCyQj+bXFhC4WoyS+Onv8DseIopUolTb4pAOzVHd0ecndmZtmfi+lvR37CYo48SsHkimUi031eNmFIqVOkCL1ozB1VWTEc08kqY8lfjDpFr6ysb2nLXHc4785WUa0WA9gQDUXHO2FbAe4QO5cgrHlXXAFFdGXi7cvcH8ufXYB+qhmYs6POOgZOlVyMy6FH0NDEmr17GcKCeS06GIDgjX1cIL4/pnHH4YP4HHts4V1PQ3IeD/K3J/8Bor9PA/Ur4ZxJXhaR+CLOSTlf57289QZQYny8sxyxXymPq3m7y3tcbOF7cycptN1TpjmPEPt5O+XnlrjK3K9oQJ4FYAmIEXEk2dj/ChmsjpTX1OtCHz/dbBSSJZ+F3UT2qV8BSZTyAAq7+nJOnutp8FqiOR+mXJtHUOgrvofJTgRk+HlHT4louVfCyajyiSYLHoGYz1gmw6ipfBk6nOIumm9xJsm1IqgjTZQAIicvvnvxIv4mFHm55Xo1W3dga0xHfH14g/AplwvkYXOl9tz46s8ekLDLlEMXpfHnRuz9Oby1K4zD4j4R3rTUV3aSfun9XEGdTBo8ATtQewJfn6vclRkIlzzsqGglysfpNzxpQa0VqVLb1N4qwLpVnrTaXEk=
+    - REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
 before_script:
   - cd Site
   - git checkout master
@@ -14,7 +16,7 @@ before_script:
   - cd ..
 script:
   - swift build
-  - .build/debug/site
+  - ".build/debug/site"
 after_success:
   - cd Site
   - git status
