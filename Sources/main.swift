@@ -67,7 +67,7 @@ for (index, episode) in episodes {
         "episode"      : episode
     ])
     try episodePage.write(toFile            : "Site/\(index)/index.html",
-                      atomically        : true,
-                      encoding          : .utf8,
-                      creatingDirectory : true)
+                          atomically        : true,
+                          encoding          : .utf8,
+                          creatingDirectory : true)
 }
