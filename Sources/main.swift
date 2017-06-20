@@ -65,7 +65,8 @@ let episodeTemplate = try environment.loadTemplate(name: "episode.html")
 for (index, episode) in episodes {
     let episodePage = try episodeTemplate.render([
         "podcastTitle" : title,
-        "episode"      : episode
+        "episode"      : episode,
+        "mp3url"       : episode.enclosure?.attributes?.url
     ])
     try episodePage.write(toFile            : "Site/\(index)/index.html",
                           atomically        : true,

@@ -7,6 +7,9 @@
   <body>
     <h1><a href="../">{{ podcastTitle }}</a></h1>
     <h2>{{ episode.title }}</h2>
+    <audio controls>
+      <source src="{{mp3url}}" type="audio/mpeg" />
+    </audio>
     {{ episode.description }}
   </body>
 </html>
