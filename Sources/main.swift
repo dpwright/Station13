@@ -81,6 +81,9 @@ extension FileSystem.Item {
 
         do {
             let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: newPath) {
+                try fileManager.removeItem(atPath: newPath)
+            }
             try fileManager.copyItem(atPath: path, toPath: newPath)
         } catch {
             throw OperationError.moveFailed(self)
