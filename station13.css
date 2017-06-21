@@ -1,0 +1,90 @@
+/* Hankyu Blue:   #12163b */
+/* Hankyu Maroon: #451c1d */
+/* Hankyu Ivory:  #ddd1be */
+/* White:         #fbfaee */
+/* Arrow Red:     #e13349 */
+
+body {
+  background-color: #fbfafe;
+  font-family:      Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding:          0;
+  margin:           0;
+}
+
+div#header {
+  background-color: #12163b;
+  color:            #fbfaee;
+  height:           200px;
+  width:            100%;
+  vertical-align:   middle;
+  display:          table;
+}
+
+div#header div.headerContent {
+  vertical-align:   middle;
+  display:          table-cell;
+}
+
+div#header a {
+  color:            #fbfaee;
+  text-decoration:  none;
+  text-shadow:      0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+}
+
+div#header h1 {
+  text-align:       center;
+  vertical-align:   middle;
+  text-transform:   uppercase;
+  font-size:        6em;
+  font-weight:      normal;
+  margin:           0;
+  padding:          0;
+}
+
+div#header ul {
+  text-align:       center;
+  list-style-type:  none;
+  vertical-align:   middle;
+  margin:           0;
+  padding:          0;
+}
+
+div#header li {
+  display:          inline;
+}
+
+div#header h1 a:hover {
+  -webkit-animation:  glow 1.5s ease-in-out infinite alternate;
+  -webkit-transition: all 0.5s;
+  -moz-animation:     glow 1.5s ease-in-out infinite alternate;
+  -moz-transition:    all 0.5s;
+  animation:          glow 1.5s ease-in-out infinite alternate;
+  transition:         all 0.5s;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+  }
+  to {
+    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+  }
+}
+
+@-moz-keyframes glow {
+  from {
+    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+  }
+  to {
+    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+  }
+  to {
+    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+  }
+}
