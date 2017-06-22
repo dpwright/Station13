@@ -128,3 +128,10 @@ div#footer {
   font-size:        0.75em;
   padding-bottom:   25px;
 }
+
+ul.archive {
+  list-style-type:  none;
+}
+
+ul.archive li {
+}

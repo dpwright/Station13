@@ -1,30 +1,29 @@
 <html>
   <head>
     <title>
-      {{ podcastTitle }} | {{ episode.title }}
+      {{ podcastTitle }}
     </title>
     <link rel="stylesheet" href="../station13.css">
   </head>
   <body>
     <div id="header">
       <div class="headerContent">
-        <h1><a href="../">{{ podcastTitle }}</a></h1>
+        <h1><a href="#">{{ podcastTitle }}</a></h1>
         <ul>
           <li><a href="https://itunes.apple.com/us/podcast/station-13/id1240319438">iTunes</a></li>
           <li><a href="http://station13.libsyn.com/rss">RSS</a></li>
-          <li><a href="../archive">Archive</a></li>
+          <li><a href="#">Archive</a></li>
           <li><a href="../feedback">Feedback</a></li>
         </ul>
       </div>
     </div>
     <div id="content">
-      <div class="episode">
-        <h2>{{ episode.title }}</h2>
-        <audio controls>
-          <source src="{{mp3url}}" type="audio/mpeg" />
-        </audio>
-        {{ episode.description }}
-      </div>
+      <h1>Episode archive</h1>
+      <ul class="archive">
+      {% for episode in episodes %}
+        <li><a href="{{episode.index}}">{{ episode.content.title }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
     <div id="footer">
       &copy; {{ copyright }}

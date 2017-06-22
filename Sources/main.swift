@@ -62,6 +62,18 @@ try index.write(toFile            : "Site/index.html",
                 encoding          : .utf8,
                 creatingDirectory : true)
 
+// Archive
+let archiveTemplate = try environment.loadTemplate(name: "archive.html")
+let archive = try archiveTemplate.render([
+    "podcastTitle" : title,
+    "copyright"    : copyright,
+    "episodes"     : episodes.map{ ["index": $0.0, "content": $0.1] }
+])
+try archive.write(toFile            : "Site/archive/index.html",
+                  atomically        : true,
+                  encoding          : .utf8,
+                  creatingDirectory : true)
+
 // Episode pages
 let episodeTemplate = try environment.loadTemplate(name: "episode.html")
 for (index, episode) in episodes {
