@@ -6,6 +6,7 @@
 
 body {
   background-color: #fbfafe;
+  color:            #12163b;
   font-family:      Helvetica Neue, Helvetica, Arial, sans-serif;
   padding:          0;
   margin:           0;
@@ -87,4 +88,50 @@ div#header h1 a:hover {
   to {
     text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
   }
+}
+
+div#content {
+  width:            450px;
+  margin:           auto;
+}
+
+div#content h2 a {
+  color:            #12163b;
+}
+
+div#content a {
+  color:            #c5182F;
+  text-decoration:  none;
+}
+
+div#content a:visited {
+  color:            #c5182f;
+  text-decoration:  none;
+}
+
+div#content a:hover {
+  color:            #c5182f;
+  text-decoration:  none;
+}
+
+div.episode {
+  padding-top:      25px;
+  padding-bottom:   25px;
+}
+
+audio {
+  width:            100%;
+}
+
+div#footer {
+  text-align:       center;
+  font-size:        0.75em;
+  padding-bottom:   25px;
+}
+
+ul.archive {
+  list-style-type:  none;
+}
+
+ul.archive li {
 }
