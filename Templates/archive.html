@@ -18,12 +18,14 @@
       </div>
     </div>
     <div id="content">
-      <h1>Episode archive</h1>
-      <ul class="archive">
-      {% for episode in episodes %}
-        <li><a href="{{episode.index}}">{{ episode.content.title }}</a></li>
-      {% endfor %}
-      </ul>
+      <div class="archive">
+        <h1>Episode archive</h1>
+        <ul class="archive">
+        {% for episode in episodes %}
+          <li><a href="../{{episode.index}}">{{ episode.content.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
     </div>
     <div id="footer">
       &copy; {{ copyright }}

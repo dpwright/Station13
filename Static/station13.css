@@ -129,6 +129,10 @@ div#footer {
   padding-bottom:   25px;
 }
 
+div.archive h1 {
+  text-align:       center;
+}
+
 ul.archive {
   list-style-type:  none;
 }
