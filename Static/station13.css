@@ -113,3 +113,12 @@ div#content a:hover {
   color:            #c5182f;
   text-decoration:  none;
 }
+
+div.episode {
+  padding-top:      25px;
+  padding-bottom:   25px;
+}
+
+audio {
+  width:            100%;
+}

@@ -53,7 +53,7 @@ let mainTemplate = try environment.loadTemplate(name: "index.html")
 let limit = min(episodesOnMainPage, episodes.count)
 let index = try mainTemplate.render([
     "podcastTitle" : title,
-    "episodes"     : episodes[0..<limit].map{ ["index": $0.0, "content": $0.1] }
+    "episodes"     : episodes[0..<limit].map{ ["index": $0.0, "content": $0.1, "mp3url": $0.1.enclosure?.attributes?.url] }
 ])
 try index.write(toFile            : "Site/index.html",
                 atomically        : true,
