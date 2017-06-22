@@ -122,3 +122,9 @@ div.episode {
 audio {
   width:            100%;
 }
+
+div#footer {
+  text-align:       center;
+  font-size:        0.75em;
+  padding-bottom:   25px;
+}

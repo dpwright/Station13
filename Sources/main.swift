@@ -42,8 +42,9 @@ guard let feed = result.rssFeed,
     abort()
 }
 
-let title    = feed.title ?? "Unnamed Podcast"
-let episodes = feed.items?.reversed().enumerated().reversed().map{ ($0.0 + 1, $0.1) } ?? []
+let title     = feed.title ?? "Unnamed Podcast"
+let episodes  = feed.items?.reversed().enumerated().reversed().map{ ($0.0 + 1, $0.1) } ?? []
+let copyright = feed.copyright ?? ""
 
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
@@ -53,6 +54,7 @@ let mainTemplate = try environment.loadTemplate(name: "index.html")
 let limit = min(episodesOnMainPage, episodes.count)
 let index = try mainTemplate.render([
     "podcastTitle" : title,
+    "copyright"    : copyright,
     "episodes"     : episodes[0..<limit].map{ ["index": $0.0, "content": $0.1, "mp3url": $0.1.enclosure?.attributes?.url] }
 ])
 try index.write(toFile            : "Site/index.html",
@@ -65,6 +67,7 @@ let episodeTemplate = try environment.loadTemplate(name: "episode.html")
 for (index, episode) in episodes {
     let episodePage = try episodeTemplate.render([
         "podcastTitle" : title,
+        "copyright"    : copyright,
         "episode"      : episode,
         "mp3url"       : episode.enclosure?.attributes?.url
     ])
