@@ -17,9 +17,11 @@
         </ul>
       </div>
     </div>
-    {% for episode in episodes %}
-      <h2><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
-      {{ episode.content.description }}
-    {% endfor %}
+    <div id="content">
+      {% for episode in episodes %}
+        <h2><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
+        {{ episode.content.description }}
+      {% endfor %}
+    </div>
   </body>
 </html>

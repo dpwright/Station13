@@ -17,10 +17,12 @@
         </ul>
       </div>
     </div>
-    <h2>{{ episode.title }}</h2>
-    <audio controls>
-      <source src="{{mp3url}}" type="audio/mpeg" />
-    </audio>
-    {{ episode.description }}
+    <div id="content">
+      <h2>{{ episode.title }}</h2>
+      <audio controls>
+        <source src="{{mp3url}}" type="audio/mpeg" />
+      </audio>
+      {{ episode.description }}
+    </div>
   </body>
 </html>
