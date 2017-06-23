@@ -95,6 +95,16 @@ div#content {
   margin:           auto;
 }
 
+h2.episodeTitle {
+}
+
+h3.pubDate {
+  text-align:       right;
+  font-style:       italic;
+  font-weight:      normal;
+  font-size:        0.8em;
+}
+
 div#content h2 a {
   color:            #12163b;
 }
@@ -127,6 +137,17 @@ div#footer {
   text-align:       center;
   font-size:        0.75em;
   padding-bottom:   25px;
+}
+
+div.archive h1 {
+  text-align:       center;
+}
+
+div.archive span.pubDate {
+  text-align:       right;
+  font-style:       italic;
+  font-size:        0.8em;
+  float:            right;
 }
 
 ul.archive {
