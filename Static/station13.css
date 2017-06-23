@@ -29,7 +29,7 @@ div#header div.headerContent {
 div#header a {
   color:            #fbfaee;
   text-decoration:  none;
-  text-shadow:      0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+  text-shadow:      0 0 0.005em #8883a6, 0 0 0.1em #a6a0ca, 0 0 0.2em #6b6883, 0 0 0.4em #928db2, 0 0 0.8em #696580;
 }
 
 div#header h1 {
@@ -65,30 +65,31 @@ div#header h1 a:hover {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+    text-shadow: 0 0 0.005em #8883a6, 0 0 0.1em #a6a0ca, 0 0 0.2em #6b6883, 0 0 0.4em #928db2, 0 0 0.8em #696580;
   }
   to {
-    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+    text-shadow: 0 0 0.0025em #8883a6, 0 0 0.05em #a6a0ca, 0 0 0.1em #6b6883, 0 0 0.2em #928db2, 0 0 0.4em #696580;
   }
 }
 
 @-moz-keyframes glow {
   from {
-    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+    text-shadow: 0 0 0.005em #8883a6, 0 0 0.1em #a6a0ca, 0 0 0.2em #6b6883, 0 0 0.4em #928db2, 0 0 0.8em #696580;
   }
   to {
-    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+    text-shadow: 0 0 0.0025em #8883a6, 0 0 0.05em #a6a0ca, 0 0 0.1em #6b6883, 0 0 0.2em #928db2, 0 0 0.4em #696580;
   }
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 0.005em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e, 0 0 0.8em #5a576e;
+    text-shadow: 0 0 0.005em #8883a6, 0 0 0.1em #a6a0ca, 0 0 0.2em #6b6883, 0 0 0.4em #928db2, 0 0 0.8em #696580;
   }
   to {
-    text-shadow: 0 0 0.0025em #5a576e, 0 0 0.05em #5a576e, 0 0 0.1em #5a576e, 0 0 0.2em #5a576e, 0 0 0.4em #5a576e;
+    text-shadow: 0 0 0.0025em #8883a6, 0 0 0.05em #a6a0ca, 0 0 0.1em #6b6883, 0 0 0.2em #928db2, 0 0 0.4em #696580;
   }
 }
+
 
 div#content {
   width:            450px;
