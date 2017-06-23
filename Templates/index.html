@@ -20,11 +20,12 @@
     <div id="content">
       {% for episode in episodes %}
         <div class="episode">
-          <h2><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
+          <h2 class="episodeTitle"><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
           <audio controls>
             <source src="{{episode.mp3url}}" type="audio/mpeg" />
           </audio>
           {{ episode.content.description }}
+          <h3 class="pubDate">{{ episode.date }}</h3>
         </div>
       {% endfor %}
     </div>

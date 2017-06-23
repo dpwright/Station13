@@ -19,11 +19,12 @@
     </div>
     <div id="content">
       <div class="episode">
-        <h2>{{ episode.title }}</h2>
+        <h2 class="episodeTitle">{{ episode.title }}</h2>
         <audio controls>
           <source src="{{mp3url}}" type="audio/mpeg" />
         </audio>
         {{ episode.description }}
+        <h3 class="pubDate">{{ date }}</h3>
       </div>
     </div>
     <div id="footer">

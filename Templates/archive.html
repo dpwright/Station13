@@ -22,7 +22,8 @@
         <h1>Episode archive</h1>
         <ul class="archive">
         {% for episode in episodes %}
-          <li><a href="../{{episode.index}}">{{ episode.content.title }}</a></li>
+        <li><a href="../{{episode.index}}">{{ episode.content.title }}</a>
+            <span class="pubDate">{{ episode.date }}</span></li>
         {% endfor %}
         </ul>
       </div>
