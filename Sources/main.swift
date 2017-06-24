@@ -8,6 +8,9 @@ import SwiftSoup
 let feedURL            = URL(string: "http://station13.libsyn.com/rss")!
 let episodesOnMainPage = 5
 
+let dateFormatter = DateFormatter()
+dateFormatter.dateStyle = .long
+
 /*********    THE CODE   *********/
 extension String {
     func write(toFile path: String,
@@ -52,12 +55,6 @@ let image       = feed.image?.url ?? ""
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
 
-func reformat(date: Date) -> String {
-  let formatter = DateFormatter()
-  formatter.dateStyle = .long
-  return formatter.string(from: date)
-}
-
 // Main page
 let mainTemplate = try environment.loadTemplate(name: "index.html")
 let limit = min(episodesOnMainPage, episodes.count)
@@ -69,7 +66,7 @@ let index = try mainTemplate.render([
     "episodes"     : episodes[0..<limit].map{
       ["index"   : $0.0,
        "content" : $0.1,
-       "date"    : reformat(date: $0.1.pubDate!),
+       "date"    : dateFormatter.string(from: $0.1.pubDate!),
        "mp3url"  : $0.1.enclosure?.attributes?.url]
     }
 ])
@@ -88,7 +85,7 @@ let archive = try archiveTemplate.render([
     "episodes"     : episodes.map{
       ["index"   : $0.0,
        "content" : $0.1,
-       "date"    : reformat(date: $0.1.pubDate!)]
+       "date"    : dateFormatter.string(from: $0.1.pubDate!)]
     }
 ])
 try archive.write(toFile            : "Site/archive/index.html",
@@ -107,7 +104,7 @@ for (index, episode) in episodes {
         "episode"      : episode,
         "description"  : description,
         "image"        : image,
-        "date"         : reformat(date: episode.pubDate!),
+        "date"         : dateFormatter.string(from: episode.pubDate!),
         "mp3url"       : episode.enclosure?.attributes?.url
     ])
     try episodePage.write(toFile            : "Site/\(index)/index.html",
