@@ -117,6 +117,10 @@ div#content h2 a {
   color:            #12163b;
 }
 
+div#content h2 a:visited {
+  color:            #12163b;
+}
+
 div#content a {
   color:            #c5182F;
   text-decoration:  none;
