@@ -2,6 +2,7 @@ import Foundation
 import FeedKit
 import Stencil
 import Files
+import SwiftSoup
 
 /********* CONFIGURATION *********/
 let feedURL            = URL(string: "http://station13.libsyn.com/rss")!
@@ -42,9 +43,11 @@ guard let feed = result.rssFeed,
     abort()
 }
 
-let title     = feed.title ?? "Unnamed Podcast"
-let episodes  = feed.items?.reversed().enumerated().reversed().map{ ($0.0 + 1, $0.1) } ?? []
-let copyright = feed.copyright ?? ""
+let title       = feed.title ?? "Unnamed Podcast"
+let episodes    = feed.items?.reversed().enumerated().reversed().map{ ($0.0 + 1, $0.1) } ?? []
+let copyright   = feed.copyright ?? ""
+let description = feed.description ?? ""
+let image       = feed.image?.url ?? ""
 
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
@@ -61,6 +64,8 @@ let limit = min(episodesOnMainPage, episodes.count)
 let index = try mainTemplate.render([
     "podcastTitle" : title,
     "copyright"    : copyright,
+    "description"  : description,
+    "image"        : image,
     "episodes"     : episodes[0..<limit].map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -78,6 +83,8 @@ let archiveTemplate = try environment.loadTemplate(name: "archive.html")
 let archive = try archiveTemplate.render([
     "podcastTitle" : title,
     "copyright"    : copyright,
+    "description"  : description,
+    "image"        : image,
     "episodes"     : episodes.map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -92,10 +99,14 @@ try archive.write(toFile            : "Site/archive/index.html",
 // Episode pages
 let episodeTemplate = try environment.loadTemplate(name: "episode.html")
 for (index, episode) in episodes {
+    let description = try SwiftSoup.parse(episode.description ?? "").select("p").first()?.text() ?? ""
+    let image = episode.iTunes?.iTunesImage?.attributes?.href
     let episodePage = try episodeTemplate.render([
         "podcastTitle" : title,
         "copyright"    : copyright,
         "episode"      : episode,
+        "description"  : description,
+        "image"        : image,
         "date"         : reformat(date: episode.pubDate!),
         "mp3url"       : episode.enclosure?.attributes?.url
     ])
