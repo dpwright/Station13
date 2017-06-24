@@ -19,6 +19,12 @@ div#header {
   width:            100%;
   vertical-align:   middle;
   display:          table;
+
+  background:       #12163b;
+  background:       -moz-linear-gradient(top, #1d1719 0%, #252140 5%, #252140 48%, #252140 95%, #1d1719 100%);
+  background:       -webkit-linear-gradient(top, #1d1719 0%,#252140 5%,#252140 48%,#252140 95%,#1d1719 100%);
+  background:       linear-gradient(to bottom, #1d1719 0%,#252140 5%,#252140 48%,#252140 95%,#1d1719 100%);
+  filter:           progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1719', endColorstr='#1d1719',GradientType=0 );
 }
 
 div#header div.headerContent {
