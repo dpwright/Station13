@@ -19,6 +19,7 @@ div#header {
   width:            100%;
   vertical-align:   middle;
   display:          table;
+  white-space:      nowrap;
 
   background:       #12163b;
   background:       -moz-linear-gradient(top, #1d1719 0%, #252140 5%, #252140 48%, #252140 95%, #1d1719 100%);
@@ -146,6 +147,10 @@ div#footer {
   padding-bottom:   25px;
 }
 
+div.about h1 {
+  text-align:       center;
+}
+
 div.archive h1 {
   text-align:       center;
 }
@@ -163,3 +168,17 @@ ul.archive {
 
 ul.archive li {
 }
+
+/* Responsive stuff */
+
+@media screen and (max-width: 600px) {
+  div#header h1 {
+    font-size: 15vw;
+  }
+
+  div#content {
+    width:     80%;
+    margin:    auto;
+  }
+}
+
