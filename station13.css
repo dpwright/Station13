@@ -147,6 +147,10 @@ div#footer {
   padding-bottom:   25px;
 }
 
+div.about h1 {
+  text-align:       center;
+}
+
 div.archive h1 {
   text-align:       center;
 }
@@ -167,10 +171,9 @@ ul.archive li {
 
 /* Responsive stuff */
 
-/*Display 3 per row for medium displays (like mobile phones in landscape or smaller tablets)*/
-@media screen and (min-width: 28.75em) {
+@media screen and (max-width: 600px) {
+  div#header h1 {
+    font-size: 15vw;
+  }
 }
 
-/*Display 6 to a row for large displays (like medium tablets and up) */
-@media screen and (min-width: 40.5em) {
-}
