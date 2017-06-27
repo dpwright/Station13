@@ -51,6 +51,7 @@ let episodes    = feed.items?.reversed().enumerated().reversed().map{ ($0.0 + 1,
 let copyright   = feed.copyright ?? ""
 let description = feed.description ?? ""
 let image       = feed.image?.url ?? ""
+let link        = feed.link ?? ""
 
 let fsLoader = FileSystemLoader(paths: ["Templates/"])
 let environment = Environment(loader: fsLoader)
@@ -63,6 +64,7 @@ let index = try mainTemplate.render([
     "copyright"    : copyright,
     "description"  : description,
     "image"        : image,
+    "link"         : link,
     "episodes"     : episodes[0..<limit].map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -82,6 +84,7 @@ let archive = try archiveTemplate.render([
     "copyright"    : copyright,
     "description"  : description,
     "image"        : image,
+    "link"         : "\(link)archive",
     "episodes"     : episodes.map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -103,6 +106,7 @@ for (index, episode) in episodes {
         "copyright"    : copyright,
         "episode"      : episode,
         "description"  : description,
+        "link"         : "\(link)\(index)",
         "image"        : image,
         "date"         : dateFormatter.string(from: episode.pubDate!),
         "mp3url"       : episode.enclosure?.attributes?.url
