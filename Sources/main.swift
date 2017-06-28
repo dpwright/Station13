@@ -5,17 +5,15 @@ import Files
 import SwiftSoup
 
 /********* CONFIGURATION *********/
-let feedURL            = URL(string: "http://station13.libsyn.com/rss")!
-let episodesOnMainPage = 5
-
-let dateFormatter = DateFormatter()
-dateFormatter.dateStyle = .long
-
 let show = [
   "iTunesLink": "https://itunes.apple.com/us/podcast/station-13/id1240319438",
   "rssFeed":    "http://station13.libsyn.com/rss",
   "twitter":    "@Station13FM"
 ]
+
+let episodesOnMainPage = 5
+let dateFormatter = DateFormatter()
+dateFormatter.dateStyle = .long
 
 /*********    THE CODE   *********/
 extension String {
@@ -41,8 +39,8 @@ extension String {
     }
 }
 
-guard let result = FeedParser(URL: feedURL)?.parse() else {
-    print("Failed to construct FeedParser for URL \(feedURL)")
+guard let result = FeedParser(URL: URL(string: show["rssFeed"]!)!)?.parse() else {
+    print("Failed to construct FeedParser for URL \(show["rssFeed"])")
     abort()
 }
 
