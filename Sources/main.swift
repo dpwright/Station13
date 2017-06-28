@@ -81,6 +81,7 @@ try index.write(toFile            : "Site/index.html",
 let archiveTemplate = try environment.loadTemplate(name: "archive.html")
 let archive = try archiveTemplate.render([
     "podcastTitle" : title,
+    "pageTitle"    : "Archive",
     "copyright"    : copyright,
     "description"  : description,
     "image"        : image,
@@ -103,6 +104,7 @@ for (index, episode) in episodes {
     let image = episode.iTunes?.iTunesImage?.attributes?.href
     let episodePage = try episodeTemplate.render([
         "podcastTitle" : title,
+        "pageTitle"    : episode.title,
         "copyright"    : copyright,
         "episode"      : episode,
         "description"  : description,

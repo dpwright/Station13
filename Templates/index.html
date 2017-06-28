@@ -1,23 +1,23 @@
 <html>
   <head>
     <title>
-      {{ podcastTitle }}
+      {{ podcastTitle }}{% if pageTitle %} | {{pageTitle}}{% endif %}
     </title>
-    <link rel="stylesheet" href="station13.css">
+    <link rel="stylesheet" href="/station13.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="apple-itunes-app" content="app-id=1240319438">
     <meta property="og:site_name" content="{{ podcastTitle }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:title" content="Station 13">
+    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }}{% else %}{{ podcastTitle }}{% endif %}">
     <meta property="og:url" content="{{ link }}">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Station 13">
+    <meta itemprop="name" content="{% if pageTitle %}{{ pageTitle }}{% else %}{{ podcastTitle }}{% endif %}">
     <meta itemprop="url" content="{{ link }}">
     <meta itemprop="description" content="{{ description }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Station13FM">
-    <meta name="twitter:title" content="{{ podcastTitle }}">
+    <meta name="twitter:title" content="{{ podcastTitle }}{% if episode.title %} | {{ episode.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ image }}">
     <meta name="description" content="{{ description }}">
@@ -25,7 +25,7 @@
   <body>
     <div id="header">
       <div class="headerContent">
-        <h1><a href="#">{{ podcastTitle }}</a></h1>
+        <h1><a href="/">{{ podcastTitle }}</a></h1>
         <ul>
           <li><a href="https://itunes.apple.com/us/podcast/station-13/id1240319438">iTunes</a></li>
           <li><a href="http://station13.libsyn.com/rss">RSS</a></li>
