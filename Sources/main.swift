@@ -97,6 +97,21 @@ try archive.write(toFile            : "Site/archive/index.html",
                   encoding          : .utf8,
                   creatingDirectory : true)
 
+// About
+let aboutTemplate = try environment.loadTemplate(name: "about.html")
+let about = try aboutTemplate.render([
+    "podcastTitle" : title,
+    "pageTitle"    : "About",
+    "copyright"    : copyright,
+    "description"  : description,
+    "image"        : image,
+    "link"         : "\(link)about",
+])
+try about.write(toFile            : "Site/about/index.html",
+                  atomically        : true,
+                  encoding          : .utf8,
+                  creatingDirectory : true)
+
 // Episode pages
 let episodeTemplate = try environment.loadTemplate(name: "episode.html")
 for (index, episode) in episodes {
