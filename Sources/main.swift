@@ -11,6 +11,12 @@ let episodesOnMainPage = 5
 let dateFormatter = DateFormatter()
 dateFormatter.dateStyle = .long
 
+let show = [
+  "iTunesLink": "https://itunes.apple.com/us/podcast/station-13/id1240319438",
+  "rssFeed":    "http://station13.libsyn.com/rss",
+  "twitter":    "@Station13FM"
+]
+
 /*********    THE CODE   *********/
 extension String {
     func write(toFile path: String,
@@ -65,6 +71,7 @@ let index = try mainTemplate.render([
     "description"  : description,
     "image"        : image,
     "link"         : link,
+    "show"         : show,
     "episodes"     : episodes[0..<limit].map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -86,6 +93,7 @@ let archive = try archiveTemplate.render([
     "description"  : description,
     "image"        : image,
     "link"         : "\(link)archive",
+    "show"         : show,
     "episodes"     : episodes.map{
       ["index"   : $0.0,
        "content" : $0.1,
@@ -106,6 +114,7 @@ let about = try aboutTemplate.render([
     "description"  : description,
     "image"        : image,
     "link"         : "\(link)about",
+    "show"         : show
 ])
 try about.write(toFile            : "Site/about/index.html",
                   atomically        : true,
@@ -124,6 +133,7 @@ for (index, episode) in episodes {
         "episode"      : episode,
         "description"  : description,
         "link"         : "\(link)\(index)",
+        "show"         : show,
         "image"        : image,
         "date"         : dateFormatter.string(from: episode.pubDate!),
         "mp3url"       : episode.enclosure?.attributes?.url

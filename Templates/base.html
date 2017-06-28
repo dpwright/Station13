@@ -16,7 +16,7 @@
     <meta itemprop="url" content="{{ link }}">
     <meta itemprop="description" content="{{ description }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@Station13FM">
+    <meta name="twitter:site" content="{{ show.twitter }}">
     <meta name="twitter:title" content="{{ podcastTitle }}{% if episode.title %} | {{ episode.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ image }}">
@@ -27,8 +27,8 @@
       <div class="headerContent">
         <h1><a href="/">{{ podcastTitle }}</a></h1>
         <ul>
-          <li><a href="https://itunes.apple.com/us/podcast/station-13/id1240319438">iTunes</a></li>
-          <li><a href="http://station13.libsyn.com/rss">RSS</a></li>
+          <li><a href="{{ show.iTunesLink }}">iTunes</a></li>
+          <li><a href="{{ show.rssFeed }}">RSS</a></li>
           <li><a href="/archive">Archive</a></li>
           <li><a href="/about">About</a></li>
         </ul>
