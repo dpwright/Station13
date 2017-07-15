@@ -129,6 +129,14 @@ div.archive span.pubDate {
   float:            right;
 }
 
+a.email:before {
+  content: attr(data-user);
+}
+
+a.email:after {
+  content: "@" attr(data-host);
+}
+
 ul.archive {
   list-style-type:  none;
 }
