@@ -65,6 +65,7 @@ header li {
 
 div#content {
   width:            600px;
+  max-width:        80%;
   margin:           auto;
 }
 
