@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -23,7 +24,7 @@
     <meta name="description" content="{{ description }}">
   </head>
   <body>
-    <div id="header">
+    <header>
       <div class="headerContent">
         <h1><a href="/">{{ podcastTitle }}</a></h1>
         <ul>
@@ -33,12 +34,12 @@
           <li><a href="/about">About</a></li>
         </ul>
       </div>
-    </div>
+    </header>
     <div id="content">
       {% block content %}{% endblock %}
     </div>
-    <div id="footer">
+    <footer>
       &copy; {{ copyright }}
-    </div>
+    </footer>
   </body>
 </html>
