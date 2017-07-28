@@ -10,17 +10,17 @@
     <meta name="apple-itunes-app" content="app-id=1240319438">
     <meta property="og:site_name" content="{{ podcastTitle }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }}{% else %}{{ podcastTitle }}{% if episode.title %} | {{ episode.title }}{% endif %}{% endif %}">
+    <meta property="og:title" content="{{ podcastTitle }}{% if pageTitle %} | {{pageTitle}}{% endif %}">
     <meta property="og:url" content="{{ link }}">
     <meta property="og:image" content="{{ image }}">
     <meta property="og:type" content="website">
-    <meta itemprop="title" content="{% if pageTitle %}{{ pageTitle }}{% else %}{{ podcastTitle }}{% if episode.title %} | {{ episode.title }}{% endif %}{% endif %}">
+    <meta itemprop="title" content="{{ podcastTitle }}{% if pageTitle %} | {{pageTitle}}{% endif %}">
     <meta itemprop="url" content="{{ link }}">
     <meta itemprop="image" content="{{ image }}">
     <meta itemprop="description" content="{{ description }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ show.twitter }}">
-    <meta name="twitter:title" content="{% if pageTitle %}{{ pageTitle }}{% else %}{{ podcastTitle }}{% if episode.title %} | {{ episode.title }}{% endif %}{% endif %}">
+    <meta name="twitter:title" content="{{ podcastTitle }}{% if pageTitle %} | {{pageTitle}}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ image }}">
     <meta name="description" content="{{ description }}">
