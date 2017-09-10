@@ -3,7 +3,7 @@
       {% for episode in episodes %}
         <div class="episode">
           <h2 class="episodeTitle"><a href="{{episode.index}}">{{ episode.content.title }}</a></h2>
-          <audio controls>
+          <audio controls preload="none">
             <source src="{{episode.mp3url}}" type="audio/mpeg" />
           </audio>
           {{ episode.content.description }}

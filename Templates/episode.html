@@ -2,7 +2,7 @@
 {% block content %}
       <div class="episode">
         <h2 class="episodeTitle">{{ episode.title }}</h2>
-        <audio controls>
+        <audio controls preload="none">
           <source src="{{mp3url}}" type="audio/mpeg" />
         </audio>
         {{ episode.description }}
