@@ -5,8 +5,9 @@ import Files
 import SwiftSoup
 
 /********* CONFIGURATION *********/
+let source = "http://station13.libsyn.com/rss"
 let show = [
-  "rssFeed":         "http://station13.libsyn.com/rss",
+  "rssFeed":         "https://station13.fm/feed.rss",
   "iTunes":          "https://itunes.apple.com/us/podcast/station-13/id1240319438",
   "overcast":        "https://overcast.fm/itunes1240319438/station-13",
   "pocketCasts":     "http://pca.st/d2Ca",
@@ -45,10 +46,10 @@ extension String {
     }
 }
 
-let feed = try Data(contentsOf: URL(string: show["rssFeed"]!)!)
-try feed.write(to: URL(fileURLWithPath: "Site/feed.rss"))
+let sourceFeed = try Data(contentsOf: URL(string: source)!)
+try sourceFeed.write(to: URL(fileURLWithPath: "Site/feed.rss"))
 
-guard let result = FeedParser(data: feed)?.parse() else {
+guard let result = FeedParser(data: sourceFeed)?.parse() else {
     print("Failed to construct FeedParser for URL \(show["rssFeed"])")
     abort()
 }
