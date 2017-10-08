@@ -45,7 +45,10 @@ extension String {
     }
 }
 
-guard let result = FeedParser(URL: URL(string: show["rssFeed"]!)!)?.parse() else {
+let feed = try Data(contentsOf: URL(string: show["rssFeed"]!)!)
+try feed.write(to: URL(fileURLWithPath: "Site/feed.rss"))
+
+guard let result = FeedParser(data: feed)?.parse() else {
     print("Failed to construct FeedParser for URL \(show["rssFeed"])")
     abort()
 }
