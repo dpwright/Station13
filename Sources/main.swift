@@ -6,9 +6,15 @@ import SwiftSoup
 
 /********* CONFIGURATION *********/
 let show = [
-  "iTunesLink": "https://itunes.apple.com/us/podcast/station-13/id1240319438",
-  "rssFeed":    "http://station13.libsyn.com/rss",
-  "twitter":    "@Station13FM"
+  "rssFeed":         "http://station13.libsyn.com/rss",
+  "iTunes":          "https://itunes.apple.com/us/podcast/station-13/id1240319438",
+  "overcast":        "https://overcast.fm/itunes1240319438/station-13",
+  "pocketCasts":     "http://pca.st/d2Ca",
+  "googlePlayMusic": "https://play.google.com/music/m/Ipdzur3mtrmed4ahbw2or45owwq?t=Station_13",
+  "youTube":         "https://www.youtube.com/channel/UCiiX-MrqHpZmuSMOUZR8q6A?view_as=subscriber",
+  "podchaser":       "https://www.podchaser.com/podcasts/station-13-525932",
+  "reddit":          "https://www.reddit.com/r/Station13",
+  "twitter":         "@Station13FM"
 ]
 
 let episodesOnMainPage = 5
@@ -81,6 +87,22 @@ try index.write(toFile            : "Site/index.html",
                 atomically        : true,
                 encoding          : .utf8,
                 creatingDirectory : true)
+
+// Subscribe
+let subscribeTemplate = try environment.loadTemplate(name: "subscribe.html")
+let subscribe = try subscribeTemplate.render([
+    "podcastTitle" : title,
+    "pageTitle"    : "Subscribe",
+    "copyright"    : copyright,
+    "description"  : description,
+    "image"        : image,
+    "link"         : "\(link)subscribe",
+    "show"         : show
+])
+try subscribe.write(toFile          : "Site/subscribe/index.html",
+                  atomically        : true,
+                  encoding          : .utf8,
+                  creatingDirectory : true)
 
 // Archive
 let archiveTemplate = try environment.loadTemplate(name: "archive.html")

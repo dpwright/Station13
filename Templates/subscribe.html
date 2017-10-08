@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+      <div class="subscribe">
+        <h1>Subscribe</h1>
+
+        <p><i>Station 13</i> is available in all major podcast players.  To
+        subscribe, search for "Station 13" in your podcast player of choice or
+        click one of the links below.</p>
+        <ul>
+          <li><a href="{{ show.rssFeed }}">RSS</a></li>
+          <li><a href="{{ show.iTunes }}">iTunes / Apple Podcasts</a></li>
+          <li><a href="{{ show.overcast }}">Overcast</a></li>
+          <li><a href="{{ show.pocketCasts }}">Pocket Casts</a></li>
+          <li><a href="{{ show.googlePlayMusic }}">Google Play Music</a></li>
+          <li><a href="{{ show.youTube }}">YouTube</a></li>
+          <li><a href="{{ show.podchaser }}">PodChaser</a></li>
+        </ul>
+{% endblock %}
