@@ -20,6 +20,7 @@ let show = [
 let episodesOnMainPage = 5
 let dateFormatter = DateFormatter()
 dateFormatter.dateStyle = .long
+dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
 /*********    THE CODE   *********/
 extension String {
