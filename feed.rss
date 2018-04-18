@@ -3,8 +3,8 @@
 	<channel>
 		<atom:link href="http://station13.fm/fs3d.rss" rel="self" type="application/rss+xml"/>
 		<title>Station 13</title>
-		<pubDate>Sat, 07 Apr 2018 20:23:40 +0000</pubDate>
-		<lastBuildDate>Sat, 07 Apr 2018 20:25:20 +0000</lastBuildDate>
+		<pubDate>Sat, 21 Apr 2018 20:00:00 +0000</pubDate>
+		<lastBuildDate>Sat, 21 Apr 2018 20:00:00 +0000</lastBuildDate>
 		<link>https://station13.fm/</link>
 		<language>en</language>
 		<copyright><![CDATA[2017 Dani Wright and Alex May]]></copyright>
@@ -31,6 +31,21 @@
 		<itunes:subtitle><![CDATA[]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
 				<item>
+			<title>25: Before you say “no”, just hear me out</title>
+			<pubDate>Sat, 21 Apr 2018 20:00:00 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[6b741105b6153124838d0e86f43b0cdeca31e000]]></guid>
+			<link><![CDATA[https://station13.fm/25]]></link>
+			<itunes:image href="https://s3.amp.com/station13/images/station13_logo_3000x3000_square.jpg" />
+			<description><![CDATA[<p>Alex gives us his impressions of Boston and tells us all about the latest game from Vitei Backroom, Paper Valley.  And having seen it on the plane, he is finally ready to join Dani in an analysis of Blade Runner 2049.</p><p>Discuss this episode on reddit at <a href="https://www.reddit.com/r/Station13">/r/Station13</a>, or contact us on twitter! Alex is <a href="https://twitter.com/atype808">@ATYPE808</a>, Dani is <a href="https://twitter.com/danielpwright">@danielpwright</a>, or you can get podcast updates <a href="https://twitter.com/station13fm">@Station13FM</a>.</p><h3>Show Notes</h3><ul>  <li><a href="https://github.com/junegunn/gv.vim">gv.vim</a></li>  <li><a href="https://www.bostonseaport.xyz">Boston Seaport</a></li>  <li><a href="http://east.paxsite.com">PAX East</a></li>  <li><a href="https://www.oculus.com/blog/oculus-game-days-get-hands-on-with-five-new-rift-titles-in-boston/">Oculus Game Days</a></li>  <li><a href="https://www.oculus.com/experiences/rift/1887628867934702/">Paper Valley</a><ul>    <li><a href="https://www.youtube.com/watch?v=jvirqFUi2Vs">Gameplay footage and interview with our very own Alex!</a></li></ul></li>  <li><a href="http://thatgamecompany.com">That Game Company</a></li>  <li><a href="https://www.imdb.com/title/tt2406566/">Atomic Blonde</a></li>  <li><a href="https://www.imdb.com/title/tt1389072/">Downsizing</a></li>  <li><a href="https://www.imdb.com/title/tt1398426/">Straight outta Compton</a></li>  <li><a href="https://www.imdb.com/title/tt1856101/">Blade Runner 2049</a></li>  <li><a href="https://en.wikipedia.org/wiki/Benjamin_Wallfisch">Benjamin Wallfisch</a></li>  <li><a href="https://www.imdb.com/title/tt0470752/">Ex Machina</a></li></ul>]]></description>
+			<content:encoded><![CDATA[<p>Alex gives us his impressions of Boston and tells us all about the latest game from Vitei Backroom, Paper Valley.  And having seen it on the plane, he is finally ready to join Dani in an analysis of Blade Runner 2049.</p><p>Discuss this episode on reddit at <a href="https://www.reddit.com/r/Station13">/r/Station13</a>, or contact us on twitter! Alex is <a href="https://twitter.com/atype808">@ATYPE808</a>, Dani is <a href="https://twitter.com/danielpwright">@danielpwright</a>, or you can get podcast updates <a href="https://twitter.com/station13fm">@Station13FM</a>.</p><h3>Show Notes</h3><ul>  <li><a href="https://github.com/junegunn/gv.vim">gv.vim</a></li>  <li><a href="https://www.bostonseaport.xyz">Boston Seaport</a></li>  <li><a href="http://east.paxsite.com">PAX East</a></li>  <li><a href="https://www.oculus.com/blog/oculus-game-days-get-hands-on-with-five-new-rift-titles-in-boston/">Oculus Game Days</a></li>  <li><a href="https://www.oculus.com/experiences/rift/1887628867934702/">Paper Valley</a><ul>    <li><a href="https://www.youtube.com/watch?v=jvirqFUi2Vs">Gameplay footage and interview with our very own Alex!</a></li></ul></li>  <li><a href="http://thatgamecompany.com">That Game Company</a></li>  <li><a href="https://www.imdb.com/title/tt2406566/">Atomic Blonde</a></li>  <li><a href="https://www.imdb.com/title/tt1389072/">Downsizing</a></li>  <li><a href="https://www.imdb.com/title/tt1398426/">Straight outta Compton</a></li>  <li><a href="https://www.imdb.com/title/tt1856101/">Blade Runner 2049</a></li>  <li><a href="https://en.wikipedia.org/wiki/Benjamin_Wallfisch">Benjamin Wallfisch</a></li>  <li><a href="https://www.imdb.com/title/tt0470752/">Ex Machina</a></li></ul>]]></content:encoded>
+			<enclosure length="47649675" type="audio/mpeg" url="https://s3.amazonaws.com/station13/episodes/S13_E025.mp3" />
+			<itunes:duration>01:05:28</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[Alex gives us his impressions of Boston and tells us all about the latest game from Vitei Backroom, Paper Valley.  And having seen it on the plane, he is finally ready to join Dani in an analysis of Blade Runner 2049.]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+					</item>
+		<item>
 			<title>24: This guy’s not a real person, he’s British</title>
 			<pubDate>Sat, 07 Apr 2018 20:23:40 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[b10ed95d47f3fa21f35635b9f4493e16]]></guid>
