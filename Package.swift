@@ -1,13 +1,22 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.1
 
 import PackageDescription
 
 let package = Package(
     name: "station13",
+    products: [
+        .executable(name: "site", targets: ["Site"])
+    ],
     dependencies: [
-        .Package(url: "https://github.com/nmdias/FeedKit.git", majorVersion: 6),
-        .Package(url: "https://github.com/kylef/Stencil.git", majorVersion: 0, minor: 9),
-        .Package(url: "https://github.com/JohnSundell/Files.git", majorVersion: 1, minor: 9),
-        .Package(url: "https://github.com/scinfu/SwiftSoup.git", majorVersion: 1, minor: 3)
+        .package(url: "https://github.com/nmdias/FeedKit.git", from: "6.0.0"),
+        .package(url: "https://github.com/kylef/Stencil.git", .upToNextMinor(from: "0.9.0")),
+        .package(url: "https://github.com/JohnSundell/Files.git", .upToNextMinor(from: "1.9.0")),
+        .package(url: "https://github.com/scinfu/SwiftSoup.git", .upToNextMinor(from: "1.3.0"))
+    ],
+    targets: [
+        .target(
+            name: "Site",
+            dependencies: ["FeedKit", "Stencil", "Files", "SwiftSoup"]
+        )
     ]
 )
