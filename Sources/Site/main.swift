@@ -21,6 +21,7 @@ let episodesOnMainPage = 5
 let dateFormatter = DateFormatter()
 dateFormatter.dateStyle = .long
 dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+dateFormatter.locale = Locale(identifier: "en_US")
 
 /*********    THE CODE   *********/
 extension String {
