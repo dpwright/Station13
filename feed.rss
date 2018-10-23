@@ -3,8 +3,8 @@
 	<channel>
 		<atom:link href="https://s3.amazonaws.com/station13/feed.rss" rel="self" type="application/rss+xml"/>
 		<title>Station 13</title>
-		<pubDate>Sat, 21 Apr 2018 20:00:00 +0000</pubDate>
-		<lastBuildDate>Sat, 21 Apr 2018 20:00:00 +0000</lastBuildDate>
+		<pubDate>Sat, 20 October 2018 16:30:00 +0000</pubDate>
+		<lastBuildDate>Sat, 20 October 2018 16:30:00 +0000</lastBuildDate>
 		<link>https://station13.fm/</link>
 		<language>en</language>
 		<copyright><![CDATA[2017 Dani Wright and Alex May]]></copyright>
