@@ -50,10 +50,7 @@ extension String {
 let sourceFeed = try Data(contentsOf: URL(fileURLWithPath: "feed.rss"))
 try sourceFeed.write(to: URL(fileURLWithPath: "Site/feed.rss"))
 
-guard let result = FeedParser(data: sourceFeed)?.parse() else {
-    print("Failed to construct FeedParser for URL \(show["rssFeed"])")
-    abort()
-}
+let result = FeedParser(data: sourceFeed).parse()
 
 guard let feed = result.rssFeed,
       result.isSuccess else {

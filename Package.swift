@@ -8,10 +8,10 @@ let package = Package(
         .executable(name: "site", targets: ["Site"])
     ],
     dependencies: [
-        .package(url: "https://github.com/nmdias/FeedKit.git", from: "6.0.0"),
-        .package(url: "https://github.com/kylef/Stencil.git", .upToNextMinor(from: "0.9.0")),
-        .package(url: "https://github.com/JohnSundell/Files.git", .upToNextMinor(from: "1.9.0")),
-        .package(url: "https://github.com/scinfu/SwiftSoup.git", .upToNextMinor(from: "1.3.0"))
+        .package(url: "https://github.com/nmdias/FeedKit.git", .upToNextMinor(from: "8.1.0")),
+        .package(url: "https://github.com/kylef/Stencil.git", from: "0.9.0"),
+        .package(url: "https://github.com/JohnSundell/Files.git", .upToNextMinor(from: "2.0.0")),
+        .package(url: "https://github.com/scinfu/SwiftSoup.git", from: "1.3.0")
     ],
     targets: [
         .target(
