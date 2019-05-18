@@ -31,6 +31,22 @@
 		<itunes:subtitle><![CDATA[]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
 		<item>
+			<itunes:episode>48</itunes:episode>
+			<title>48: The show must go on</title>
+			<pubDate>Sat, 18 May 2019 16:30:00 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[6981c5827ac84697328d66a3ca2a79cc4686030c]]></guid>
+			<link><![CDATA[https://station13.fm/48]]></link>
+			<itunes:image href="https://s3.amazonaws.com/station13/images/station13_logo_3000x3000_square.jpg" />
+			<description><![CDATA[<p>Alex and Dani record an EXTREMELY brief episode to talk about the future of Station 13.</p><p>Reddit: <a href="https://www.reddit.com/r/Station13">/r/Station13</a><br/>Twitter (Alex): <a href="https://twitter.com/protracker">@protracker</a><br/>Twitter (Dani): <a href="https://twitter.com/danielpwright">@danielpwright</a><br/>Twitter (Station 13): <a href="https://twitter.com/station13fm">@Station13FM</a><br/>Mastodon (Dani): <a href="https://mastodon.social/@dpwright">@dpwright@mastodon.social</a><br/>Mastodon (Station 13): <a href="https://botsin.space/@station13">@station13@botsin.space</a>]]></description>
+			<content:encoded><![CDATA[<p>Alex and Dani record an EXTREMELY brief episode to talk about the future of Station 13.</p><p>Reddit: <a href="https://www.reddit.com/r/Station13">/r/Station13</a><br/>Twitter (Alex): <a href="https://twitter.com/protracker">@protracker</a><br/>Twitter (Dani): <a href="https://twitter.com/danielpwright">@danielpwright</a><br/>Twitter (Station 13): <a href="https://twitter.com/station13fm">@Station13FM</a><br/>Mastodon (Dani): <a href="https://mastodon.social/@dpwright">@dpwright@mastodon.social</a><br/>Mastodon (Station 13): <a href="https://botsin.space/@station13">@station13@botsin.space</a>]]></content:encoded>
+			<enclosure length="3162166" type="audio/mpeg" url="https://s3.amazonaws.com/station13/episodes/S13_E048.mp3" />
+			<itunes:duration>00:03:40</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[Alex and Dani record an EXTREMELY brief episode to talk about the future of Station 13.]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
 			<itunes:episode>47</itunes:episode>
 			<title>47: Sad elephant noises</title>
 			<pubDate>Sat, 20 April 2019 16:30:00 +0000</pubDate>
